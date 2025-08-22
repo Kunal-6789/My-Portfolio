@@ -36,7 +36,7 @@ const Contact = () => {
           from_name: formData.name,
           to_name: "Ali",
           from_email: formData.email,
-          to_email: "AliSanatiDev@gmail.com",
+          to_email: "kunal7777xyz@gmail.com",
           message: formData.message,
         },
         "pn-Bw_mS1_QQdofuV"
@@ -51,21 +51,21 @@ const Contact = () => {
     }
   };
   return (
-    <section className="relative flex items-center c-space section-spacing">
+    <section className="relative flex items-center c-space section-spacing scroll-mt-20" id="contact">
       <Particles
         className="absolute inset-0 -z-50"
         quantity={100}
         ease={80}
-        color={"#ffffff"}
+        color={"#5908dbff"}
         refresh
       />
       {showAlert && <Alert type={alertType} text={alertMessage} />}
-      <div className="flex flex-col items-center justify-center max-w-md p-5 mx-auto border border-white/10 rounded-2xl bg-primary">
-        <div className="flex flex-col items-start w-full gap-5 mb-10">
-          <h2 className="text-heading">Let's Talk</h2>
+      <div className="flex flex-col items-center justify-center max-w-md p-5 mx-auto border border-white/10 rounded-2xl bg-primary shadow-lg shadow-blue-300">
+        <div className="flex flex-col items-start w-full gap-5 mb-10 ">
+          <h1 className="text-2xl md:text-3xl">Let's Connect</h1>
           <p className="font-normal text-neutral-400">
-            Whether you're loking to build a new website, improve your existing
-            platform, or bring a unique project to life, I'm here to help
+Looking to develop a new website, enhance your platform or transform an innovative idea into reality? Let’s connect & discuss.
+
           </p>
         </div>
         <form className="w-full" onSubmit={handleSubmit}>
@@ -78,7 +78,7 @@ const Contact = () => {
               name="name"
               type="text"
               className="field-input field-input-focus"
-              placeholder="John Doe"
+              placeholder="Your Name"
               autoComplete="name"
               value={formData.name}
               onChange={handleChange}
@@ -94,7 +94,7 @@ const Contact = () => {
               name="email"
               type="email"
               className="field-input field-input-focus"
-              placeholder="JohnDoe@email.com"
+              placeholder="name@email.com"
               autoComplete="email"
               value={formData.email}
               onChange={handleChange}

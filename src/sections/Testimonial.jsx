@@ -1,6 +1,7 @@
 import { twMerge } from "tailwind-merge";
 import Marquee from "../components/Marquee";
 import { reviews } from "../constants";
+import { Particles } from "../components/Particles";
 const firstRow = reviews.slice(0, reviews.length / 2);
 const secondRow = reviews.slice(reviews.length / 2);
 
@@ -33,8 +34,15 @@ const ReviewCard = ({ img, name, username, body }) => {
 
 export default function Testimonial() {
   return (
-    <div className="items-start mt-25 md:mt-35 c-space">
-      <h2 className="text-heading">Hear From My Clients</h2>
+    <div className="items-start mt-25 md:mt-35 c-space relative">
+            <Particles
+              className="absolute inset-0 -z-50"
+              quantity={100}
+              ease={80}
+              color={"#5908dbff"}
+              refresh
+            />
+      <h2 className="text-heading">Hear From My Friends</h2>
       <div className="relative flex flex-col items-center justify-center w-full mt-12 overflow-hidden">
         <Marquee pauseOnHover className="[--duration:20s]">
           {firstRow.map((review) => (

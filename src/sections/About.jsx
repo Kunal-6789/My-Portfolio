@@ -1,116 +1,162 @@
 import { useRef } from "react";
-import Card from "../components/Card";
+import { useState } from "react";
+import { X, ArrowRight } from "lucide-react";
 import { Globe } from "../components/globe";
-import CopyEmailButton from "../components/CopyEmailButton";
 import { Frameworks } from "../components/FrameWorks";
+import Certifications from "../components/Certifications";
+import { Particles } from "../components/Particles";
 
 const About = () => {
   const grid2Container = useRef();
+  const [isOpen, setIsOpen] = useState(false);
+
   return (
-    <section className="c-space section-spacing" id="about">
+    <section className="c-space section-spacing relative scroll-mt-20" id="about">
+      <Particles
+        className="absolute inset-0 -z-50"
+        quantity={100}
+        ease={80}
+        color={"#5908dbff"}
+        refresh
+      />
       <h2 className="text-heading">About Me</h2>
       <div className="grid grid-cols-1 gap-4 md:grid-cols-6 md:auto-rows-[18rem] mt-12">
         {/* Grid 1 */}
         <div className="flex items-end grid-default-color grid-1">
           <img
-            src="assets/coding-pov.png"
-            className="absolute scale-[1.75] -right-[5rem] -top-[1rem] md:scale-[3] md:left-50 md:inset-y-10 lg:scale-[2.5]"
+            src="assets/bg-img.png"
+            className=" absolute inset-0 object-cover w-full h-full opacity-60"
           />
           <div className="z-10">
-            <p className="headtext">Hi, I'm Ali Sanati</p>
+            <p className="headtext">Hi, I'm Kunal Sharma</p>
             <p className="subtext">
-              Over the last 4 years, I developed my frontend and backend dev
-              skills to deliver dynamic and software and web applications.
+              A developer passionate about combining creativity and technology
+              to build scalable web apps and explore AI/ML solutions.Bryond
+              Problem-Solvings, I enjoy turning ideas into practical digital
+              experiences, solving real-world problems, and continuously
+              learning to grow as a developer.
             </p>
           </div>
           <div className="absolute inset-x-0 pointer-evets-none -bottom-4 h-1/2 sm:h-1/3 bg-gradient-to-t from-indigo" />
         </div>
+
         {/* Grid 2 */}
-        <div className="grid-default-color grid-2">
-          <div
-            ref={grid2Container}
-            className="flex items-center justify-center w-full h-full"
-          >
-            <p className="flex items-end text-5xl text-gray-500">
-              CODE IS CRAFT
-            </p>
-            <Card
-              style={{ rotate: "75deg", top: "30%", left: "20%" }}
-              text="GRASP"
-              containerRef={grid2Container}
-            />
-            <Card
-              style={{ rotate: "-30deg", top: "60%", left: "45%" }}
-              text="SOLID"
-              containerRef={grid2Container}
-            />
-            <Card
-              style={{ rotate: "90deg", bottom: "30%", left: "70%" }}
-              text="Design Patterns"
-              containerRef={grid2Container}
-            />
-            <Card
-              style={{ rotate: "-45deg", top: "55%", left: "0%" }}
-              text="Design Principles"
-              containerRef={grid2Container}
-            />
-            <Card
-              style={{ rotate: "20deg", top: "10%", left: "38%" }}
-              text="SRP"
-              containerRef={grid2Container}
-            />
-            <Card
-              style={{ rotate: "30deg", top: "70%", left: "70%" }}
-              image="assets/logos/csharp-pink.png"
-              containerRef={grid2Container}
-            />
-            <Card
-              style={{ rotate: "-45deg", top: "70%", left: "25%" }}
-              image="assets/logos/dotnet-pink.png"
-              containerRef={grid2Container}
-            />
-            <Card
-              style={{ rotate: "-45deg", top: "5%", left: "10%" }}
-              image="assets/logos/blazor-pink.png"
-              containerRef={grid2Container}
-            />
-          </div>
+        <div className="grid-default-color grid-2 relative overflow-visible">
+          <p className="headtext flex justify-center">Certifications</p>
+          <Certifications />
         </div>
+
         {/* Grid 3 */}
         <div className="grid-black-color grid-3">
-          <div className="z-10 w-[50%]">
-            <p className="headtext">Time Zone</p>
+          <div className=" w-[60%]">
+            <p className="headtext">Open To Work</p>
             <p className="subtext">
-              I'm based in Mars, and open to remote work worldwide
+              <ul className="list-disc list-inside text-neutral-200 space-y-2 ">
+                <li>
+                  Opportunities in Software{" "}
+                  <span className="pl-[9%]">Development</span>
+                </li>
+                <li>Internships & Full-time</li>
+                <li>Remote work</li>
+              </ul>
             </p>
           </div>
-          <figure className="absolute left-[30%] top-[10%]">
+          <figure className="absolute left-[40%] top-[1%]">
             <Globe />
           </figure>
         </div>
+
         {/* Grid 4 */}
-        <div className="grid-special-color grid-4">
-          <div className="flex flex-col items-center justify-center gap-4 size-full">
-            <p className="text-center headtext">
-              Do you want to start a project together?
+        <div className="grid-special-color grid-4 scroll-mt-20" id="education">
+          <p className="headtext">Education</p>
+          <p className="subtext">
+            <p className="font-semibold">
+              B.Tech in Computer Engineering (Honours in AIML)
             </p>
-            <CopyEmailButton />
-          </div>
+            <p className="text-md text-gray-100 pt-2">
+              Shah & Anchor Kutchhi Engineering College | 2022 – 2026
+            </p>
+            <p className="text-md text-gray-100">CGPA: 8.5</p>
+          </p>
         </div>
+
         {/* Grid 5 */}
-        <div className="grid-default-color grid-5">
+        <div className="grid-default-color grid-5 relative">
           <div className="z-10 w-[50%]">
-            <p className="headText">Teck Stack</p>
-            <p className="subtext">
-              I specialize in a variety of languages, frameworks, and tools taht
-              allow me to build robust and scalable applications
+            {/* Heading + Button Row */}
+            <div className="flex flex-col md:flex-row md:items-center md:justify-between ">
+              <p className="headtext">Tech Stack</p>
+
+              {/* Explore All Button */}
+              <button
+                onClick={() => setIsOpen(true)}
+                className="mb-3 md:mr-20 mr-8 cursor-pointer px-3 py-2 md:mt-0 mt-2 bg-indigo-800 text-white shadow-md shadow-blue-200 rounded-full hover:bg-blue-500 transition hover:scale-105 duration-300 text-sm"
+              >
+                Explore All <ArrowRight className="inline-block ml-2" />
+              </button>
+            </div>
+            <p className="hidden md:block text-lg text-gray-200">
+              A versatile set of technologies spanning frontend, backend,
+              databases, cloud, and machine learning—with Python as my core
+              programming language. This allows me to design, develop, and
+              deploy applications with efficiency.
             </p>
           </div>
-          <div className="absolute inset-y-0 md:inset-y-9 w-full h-full start-[50%] md:scale-125">
+
+          <div className="absolute inset-y-0 md:inset-y-9 w-full h-full start-[42%] md:scale-125">
             <Frameworks />
           </div>
         </div>
       </div>
+
+      {/* Popup Modal */}
+      {isOpen && (
+        <div className="fixed inset-0 bg-black/70 backdrop-blur-sm flex justify-center items-center z-50">
+          <div className="bg-gray-900 text-white rounded-2xl p-6 w-[90%] max-w-4xl relative shadow-xl">
+            {/* Close Button */}
+            <button
+              onClick={() => setIsOpen(false)}
+              className="absolute top-3 right-3 text-gray-300 hover:text-white cursor-pointer transition duration-300"
+            >
+              <X size={25} />
+            </button>
+
+            <h2 className="text-3xl font-bold mb-6 text-center underline">
+              My Tech Stack
+            </h2>
+
+            {/* Grid Sections */}
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 text-black">
+              <div className="p-4 rounded-xl bg-gradient-to-tr from-blue-400 to-blue-200 shadow-lg shadow-blue-200">
+                <h3 className="font-semibold text-xl mb-2">Frontend</h3>
+                <p className="text-lg">React, TailwindCSS, HTML, JavaScript</p>
+              </div>
+              <div className="p-4 rounded-xl shadow-lg shadow-blue-200 bg-gradient-to-tr from-orange-400 to-red-200">
+                <h3 className="font-semibold text-xl mb-2">Backend</h3>
+                <p className="text-lg">Node.js, Express, Django, Flask</p>
+              </div>
+              <div className="p-4 rounded-xl shadow-lg shadow-blue-200 bg-gradient-to-tr from-green-400 to-teal-200">
+                <h3 className="font-semibold text-xl mb-2">Databases</h3>
+                <p className="text-lg">MongoDB, MySQL, PostgreSQL</p>
+              </div>
+              <div className="p-4 rounded-xl shadow-lg shadow-blue-200 bg-gradient-to-tr from-yellow-400 to-red-200">
+                <h3 className="font-semibold text-xl mb-2">AI / ML</h3>
+                <p className="text-lg">
+                  TensorFlow, PyTorch, Scikit-learn, OpenCV
+                </p>
+              </div>
+              <div className="p-4 rounded-xl shadow-lg shadow-blue-200 bg-gradient-to-tr from-purple-400 to-pink-200">
+                <h3 className="font-semibold text-xl mb-2">Cloud & DevOps</h3>
+                <p className="text-lg">AWS, Docker, GitHub Control</p>
+              </div>
+              <div className="p-4 rounded-xl shadow-lg shadow-blue-200 bg-gradient-to-tr from-gray-400 to-gray-200">
+                <h3 className="font-semibold text-xl mb-2">Languages</h3>
+                <p className="text-lg">Python, C, Java</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      )}
     </section>
   );
 };
