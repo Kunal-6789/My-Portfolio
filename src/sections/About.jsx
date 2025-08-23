@@ -2,9 +2,9 @@ import { useRef } from "react";
 import { useState } from "react";
 import { X, ArrowRight } from "lucide-react";
 import { Globe } from "../components/globe";
-import { Frameworks } from "../components/FrameWorks";
 import Certifications from "../components/Certifications";
 import { Particles } from "../components/Particles";
+import { FrameWork } from "../components/FrameWork";
 
 const About = () => {
   const grid2Container = useRef();
@@ -104,7 +104,7 @@ const About = () => {
           </div>
 
           <div className="absolute inset-y-0 md:inset-y-9 w-full h-full start-[42%] md:scale-125">
-            <Frameworks />
+            <FrameWork />
           </div>
         </div>
       </div>
