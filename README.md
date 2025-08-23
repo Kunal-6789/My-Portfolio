@@ -1,116 +1,37 @@
-# 🚀 3D Developer Portfolio
+💻Modern 3D developer portfolio built with **React**, **Tailwind CSS**, **Three.js** & **Web API**.  
+🚀All 3D scenes and interactions use **@react-three/fiber** (React renderer for Three.js) and **@react-three/drei** (helpers like OrbitControls, Environment, and loaders). The site is responsive, fast, and showcases projects, skills, contact info, and interactive 3D elements.
 
-A modern, animated 3D developer portfolio built with React, Three.js, TailwindCSS, and motion effects — designed to help you stand out and showcase your skills creatively.
+# Kunal — 3D Portfolio
+[![Netlify Status](https://api.netlify.com/api/v1/badges/eea62b81-89e2-410f-9dda-8b4a9a7aab6e/deploy-status)](https://app.netlify.com/sites/kunal-web/deploys)
 
-![3d Portfolio Screenshot GitHub](https://github.com/user-attachments/assets/9b0ed20e-074e-4f2a-81d8-20c9da751e9e)
+🌐 **Live Demo:** https://kunal-web.netlify.app
 
----
+## Screenshots
+![Home](./assets/home.png)
+![About](./assets/about.png)
 
-## 📚 Table of Contents
+## Tech Stack
+- **Frontend:** React, JavaScript (ES2020+), Tailwind CSS
+- **3D & Rendering:** Three.js, **@react-three/fiber**, **@react-three/drei**
+- **Web API:** Fetch API / REST API integration for dynamic data
+- **Build/Tooling:** Vite, ESLint, Prettier
+- **Deployment:** Netlify
 
-- [Features](#-features)
-- [Tech Stack](#-tech-stack)
-- [Project Structure](#-project-structure)
-- [Getting Started](#-getting-started)
-- [Assets](#-assets)
-- [Contact Me](#-contact-me)
-- [Suggestions or Feedback](#-suggestions-or-feedback)
-- [Like This Project?](#-like-this-project)
+## Features
+- Responsive, mobile-first UI with Tailwind CSS
+- Interactive 3D models/scenes (orbit/pan/zoom)
+- Smooth scrolling and section-based navigation
+- Projects, Skills, and Contact sections
+- Fast builds and automatic deploys via Netlify
 
----
-
-## ✨ Features
-
-- 🔥 3D visuals powered by **React Three Fiber** and **Drei**
-- ⚡ Smooth transitions and scroll-based animations using **Framer Motion**
-- 🎨 Clean, responsive UI with **TailwindCSS**
-- 💌 Working contact form using **EmailJS**
-- 🧱 Beautiful UI enhancements with **Aceternity UI** and **Magic UI**
-- 🚀 Lightning-fast development with **Vite**
-
----
-
-## 🛠 Tech Stack
-
-| Tech              | Description                           |
-|-------------------|---------------------------------------|
-| React             | Front-end JavaScript library          |
-| Vite              | Fast bundler and dev environment      |
-| TailwindCSS       | Utility-first CSS framework           |
-| React Three Fiber | 3D rendering with Three.js in React   |
-| Drei              | Helpers and abstractions for R3F      |
-| Framer Motion     | Animation library for React           |
-| EmailJS           | Form handling and email integration   |
-| Aceternity UI     | Custom UI components                  |
-| Magic UI          | Prebuilt UI elements and design extras|
-
----
-
-## 📁 Project Structure
-
-```bash
-├── public/
-│   ├── assets/             # Images, textures, models
-│   ├── models/             # 3D Astronaut model
-│   └── vite.svg
-├── src/
-│   ├── components/         # Reusable components
-│   ├── constants/          # Reusable datas
-│   ├── sections/           # Portfolio sections (Hero, About, etc.)
-│   ├── App.jsx             # Main app file
-│   ├── index.css           # Tailwind css
-│   └── main.jsx            # Entry point
-├── tailwind.config.js
-└── vite.config.js
-```
-
----
-
-## 🚀 Getting Started
-1. Clone the Repository
-```bash
-git clone https://github.com/Ali-Sanati/Portfolio.git
-cd Portfolio
-```
-2. Install Dependencies
-```bash
+## Getting Started
+# install deps
 npm install
-```
-3. Run the Development Server
-```bash
+
+# start dev server
 npm run dev
-```
-The app will be available at http://localhost:5173.
 
----
+## License
+This project is licensed under the [MIT License](./LICENSE) © 2025 Kunal.
 
-## 🔗 Assets
-Assets used in the project can be found [here](https://github.com/user-attachments/files/19820923/public.zip)
 
----
-
-## 📬 Contact Me
-[![Instagram](https://img.shields.io/badge/Instagram-%23E4405F.svg?logo=Instagram&logoColor=white)](https://www.instagram.com/ali.sanatidev/reels/) 
-[![Static Badge](https://img.shields.io/badge/Youtube-%23FF0033?style=flat&logo=youtube)](https://www.youtube.com/channel/UCZhtUWTtk3bGJiMPN9T4HWA)
-[![LinkedIn](https://img.shields.io/badge/LinkedIn-%230077B5.svg?logo=linkedin&logoColor=white)](https://www.linkedin.com/in/ali-sanati/) 
-
----
-
-## 💡 Suggestions or Feedback?
-Leave a comment on the [YouTube video](https://youtu.be/S9UQItTpwUQ) or open an issue here on GitHub.<br/>
-👉 What should I build next?
-
-- A beautiful Landing Page
-
-- A complete E-commerce site
-
-- A fun App Clone (YouTube, Netflix, etc.)
-
-Or another interactive Portfolio
-
-Let me know!
-
----
-
-## ⭐ Like This Project?
-Star the repo and [subscribe](https://www.youtube.com/channel/UCZhtUWTtk3bGJiMPN9T4HWA??sub_confirmation=1) to the YouTube channel for more dev content!
