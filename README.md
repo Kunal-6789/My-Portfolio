@@ -7,8 +7,8 @@
 🌐 **Live Demo:** https://kunal-web.netlify.app
 
 ## Screenshots
-![Home](./assets/home.png)
-![About](./assets/about.png)
+![Home](./public/assets/home.png)
+![About](./public/assets/about.png)
 
 ## Tech Stack
 - **Frontend:** React, JavaScript (ES2020+), Tailwind CSS
